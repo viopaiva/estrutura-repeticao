@@ -18,8 +18,7 @@ function menorEMaiorAltura() {
 
     for (let altura of alturas) {
         if (altura < menor) {
-            menor = altura;
-          
+            menor = altura; 
         }
 
         if (altura > maior) {
@@ -30,5 +29,37 @@ function menorEMaiorAltura() {
     A quantidade de alturas percorridas é: ${quantidadeAlturas}
     A maior altura é: ${maior} 
     A menor altura é: ${menor}
+    `);
+}
+
+function mediaAritmetica() {
+    let soma = 0;
+    let positivos = 0;
+    let negativos = 0;
+    let quantidadeValores = 0;
+    let valor = 10;
+
+    while (valor > -8) {
+        soma += valor;
+        quantidadeValores++
+       
+        if (valor > 0) {
+            positivos++ 
+        } else {
+            negativos++
+        }
+        valor -= 1; 
+    }
+
+    const media = soma / quantidadeValores;
+    const percentualPositivos = (positivos * 100) / quantidadeValores;
+    const percentualNegativos = negativos / quantidadeValores * 100;
+    alert(`
+        quantidade de valores: ${quantidadeValores}
+        positivos: ${positivos}
+        negativos: ${negativos}
+        soma: ${soma}
+        percentual de Positivos: ${percentualPositivos.toFixed(2)}%
+        percentual de Negativos: ${percentualNegativos.toFixed(2)}%
     `);
 }
